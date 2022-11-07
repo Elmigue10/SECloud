@@ -1,0 +1,31 @@
+#main-container{
+    width: 50vw;
+    margin-top: 5vw;
+}
+
+.buttons-container{
+    width: 20vw;
+    margin-top: 2vw;
+    margin-left: 36vw;
+}
+
+#ask-container{
+    width: 50vw;
+    margin-top: 3vw;
+    text-align: center;
+}
+
+#recommendation-container{
+    width: 50vw;
+    margin-top: 3vw;
+    text-align: center;
+}
+
+button{
+    font-weight: bold;
+}
+
+ul {
+    list-style-type: none;
+  }
+  

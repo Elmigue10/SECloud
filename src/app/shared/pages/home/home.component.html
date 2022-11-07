@@ -1,0 +1,28 @@
+<div class="container" id="main-container">
+    <h1 style="text-align: center;">Hello! Welcome to the movie recommendation system.</h1>
+    <h3 style="margin-top: 3vw; text-align: center;">Let's get started. Please Answer the following questions.</h3>
+</div>
+
+<div #askContainer class="container" id="ask-container">
+    <h4>{{statement}}</h4>
+    <h4 id="ask-text">{{question}}</h4>
+    <input type="hidden" value="animated movies"  [(ngModel)]="genre">
+</div>
+
+<div *ngIf="visible" class="container" id="recommendation-container">
+    <h4>{{statement}}</h4>
+    <ul>
+        <li *ngFor="let r of recommendations">
+          {{ r.name }} - {{ r.probability }}%
+        </li>
+    </ul>
+</div>
+
+<div #buttonsContainer class="container buttons-container" id="buttons-container">
+    <button type="button" (click)="yesAnswer()" class="btn btn-outline-primary mr-1" id="yes-button">Yes</button>
+    <button type="button" (click)="noAnswer()" class="btn btn-outline-primary ml-1" id="no-button">No</button>
+</div>
+
+<div *ngIf="visible" class="container buttons-container">
+    <button type="button" (click)="backHome()" class="btn btn-outline-primary ml-1">Back Home</button>
+</div>
